@@ -20,28 +20,26 @@ const config = {
 };
 firebase.initializeApp(config);
 
-const App = createStackNavigator(
-  {
-    Login:      { screen: LoginScreen },
-    Signup:     { screen: SignupScreen },
-    Home:       { screen: MemoListScreen },
-    MemoDetail: { screen: MemoDetailScreen },
-    MemoEdit:   { screen: MemoEditScreen },
+const App = createStackNavigator({
+  Login:      { screen: LoginScreen },
+  Signup:     { screen: SignupScreen },
+  Home:       { screen: MemoListScreen },
+  MemoDetail: { screen: MemoDetailScreen },
+  MemoEdit:   { screen: MemoEditScreen },
 
-
-  }, {
-    defaultNavigationOptions: {
-      headerTitle: 'Memot',
-      headerTintColor: '#fff',
-      headerBackTitle: null,
-      headerStyle: {
-        backgroundColor: '#265366',
-      },
-      headerTitleStyle: {
-        color: '#fff',
-      },
+}, {
+  defaultNavigationOptions: {
+    headerTitle: 'Memot',
+    headerTintColor: '#fff',
+    headerBackTitle: null,
+    headerStyle: {
+      backgroundColor: '#265366',
+    },
+    headerTitleStyle: {
+      color: '#fff',
     },
   },
+},
 );
 
 export default createAppContainer(App);
